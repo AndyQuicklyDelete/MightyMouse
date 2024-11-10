@@ -18,23 +18,13 @@ def copyToClipboard():
             pyautogui.hotkey('Ctrl', 'c')
             
 
-    # if platform.system == "Darwin":
-    #     pyautogui.hotkey('command', 'c')
-
-
 def pasteFromClipboard():
     if platform.system() == "Windows":
         if keyboard.is_pressed("Ctrl"):
             pyautogui.hotkey('Ctrl', 'v')
             
 
-    # if platform.system == "Darwin":
-    #     pyautogui.hotkey('command', 'v')
-        
-
 def on_click(x, y, button, pressed):
-    #print('{0} {1} at {2}'.format(button, 'Pressed' if pressed else 'Released', (x, y)))
-
     if pressed and button == mouse.Button.left:
         copyToClipboard()
 
